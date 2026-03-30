@@ -270,6 +270,13 @@ p + p { margin-top: var(--space-sm); }
   font-weight: 600;
   color: var(--color-heading);
   transition: color var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 40px;
+  width: auto;
 }
 
 .header--transparent .header__logo {
@@ -489,6 +496,10 @@ p + p { margin-top: var(--space-sm); }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-sm);
+}
+
+.gallery-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .gallery-item {
