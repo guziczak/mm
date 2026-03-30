@@ -1267,21 +1267,27 @@ p + p { margin-top: var(--space-sm); }
     display: flex;
   }
 
+  .nav__toggle.active span {
+    background-color: var(--color-heading);
+  }
+
   .nav__list {
     position: fixed;
     top: 0;
     right: 0;
-    width: 300px;
+    width: 320px;
+    max-width: 85vw;
     height: 100vh;
-    background: var(--color-white);
+    background: var(--color-bg-warm);
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: var(--space-xl);
-    gap: var(--space-md);
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: calc(var(--header-height) + var(--space-lg)) var(--space-lg) var(--space-lg);
+    gap: 0;
     transform: translateX(100%);
     transition: transform var(--transition);
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+    overflow-y: auto;
   }
 
   .nav__list.open {
@@ -1290,6 +1296,57 @@ p + p { margin-top: var(--space-sm); }
 
   .nav__list.open .nav__link {
     color: var(--color-text);
+  }
+
+  .nav__list li {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .nav__list .nav__link {
+    display: block;
+    padding: var(--space-sm) 0;
+    font-size: var(--fs-base);
+    letter-spacing: 1px;
+  }
+
+  .nav__list .nav__link::after {
+    display: none;
+  }
+
+  .nav__list .nav__link:hover,
+  .nav__list .nav__link--active {
+    color: var(--color-accent);
+  }
+
+  .nav__list .nav__link--active {
+    font-weight: 700;
+  }
+
+  /* Mobile nav footer */
+  .nav__footer {
+    display: block;
+    margin-top: auto;
+    padding-top: var(--space-lg);
+  }
+
+  .nav__footer-contact {
+    font-size: var(--fs-sm);
+    color: var(--color-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  .nav__footer-contact a {
+    display: block;
+    color: var(--color-text);
+    padding: 4px 0;
+  }
+
+  .nav__footer-contact a:hover {
+    color: var(--color-accent);
+  }
+
+  .nav__footer .social-links {
+    margin-top: var(--space-sm);
   }
 
   .mobile-nav-overlay {
