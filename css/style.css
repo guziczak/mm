@@ -330,6 +330,11 @@ p + p { margin-top: var(--space-sm); }
   color: var(--color-text);
 }
 
+/* Nav footer - hidden on desktop, visible in mobile menu */
+.nav__footer {
+  display: none;
+}
+
 /* Hamburger */
 .nav__toggle {
   display: none;
