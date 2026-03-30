@@ -405,9 +405,10 @@ p + p { margin-top: var(--space-sm); }
 
 .hero__subtitle {
   font-family: var(--font-body);
-  font-size: var(--fs-sm);
+  font-size: var(--fs-base);
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   margin-bottom: var(--space-sm);
   color: var(--color-white);
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
