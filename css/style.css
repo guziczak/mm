@@ -318,6 +318,10 @@ p + p { margin-top: var(--space-sm); }
   width: 100%;
 }
 
+.header--transparent .header__logo img {
+  filter: brightness(0) invert(1);
+}
+
 .header--transparent .nav__link {
   color: var(--color-white);
 }
@@ -400,7 +404,8 @@ p + p { margin-top: var(--space-sm); }
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: var(--space-sm);
-  color: var(--color-accent-light);
+  color: var(--color-white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero__title {
